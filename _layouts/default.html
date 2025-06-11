@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    {% seo %}
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="{{ '/' | relative_url }}" style="border-bottom: none;">{{ site.title }}</a></h1>
+            <nav>
+                <a href="{{ '/' | relative_url }}">Blog</a>
+                <a href="{{ '/about' | relative_url }}">About</a>
+                <a href="{{ '/projects' | relative_url }}">Projects</a>
+                <a href="{{ '/contact' | relative_url }}">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://github.com/yourusername">GitHub</a>
+                <a href="https://twitter.com/yourusername">Twitter</a>
+                <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+            </div>
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html> 
