@@ -6,13 +6,133 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-    max-width: 800px;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background: #fff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.site-wrapper {
+    max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1rem 0 1rem;
+}
+
+.site-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+.site-nav {
+    margin-bottom: 1rem;
+}
+
+.site-nav a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    transition: color 0.2s;
+}
+
+.site-nav a:hover {
+    color: #0074d9;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 0 0 2rem 0;
+}
+
+.site-main {
+    min-height: 60vh;
+}
+
+.site-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem 0 1rem 0;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #0074d9;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* About page profile image */
+.about-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-profile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 700px) {
+    .site-wrapper {
+        padding: 1rem 0.5rem 0 0.5rem;
+    }
+    .about-profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .about-profile img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* 404 and placeholder */
+.page-404, .page-placeholder {
+    text-align: center;
+    margin: 5rem 0 3rem 0;
+    color: #888;
+}
+
+.page-404 h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.page-placeholder h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.page-placeholder p {
+    font-size: 1.2rem;
+    color: #666;
 }
 
 /* Typography */
@@ -50,22 +170,6 @@ a:hover {
     border-bottom-color: #000;
 }
 
-/* Navigation */
-nav {
-    margin: 1rem 0 3rem;
-    display: flex;
-    gap: 2rem;
-}
-
-nav a {
-    font-size: 1.1rem;
-    border-bottom: none;
-}
-
-nav a:hover {
-    border-bottom: 1px solid #000;
-}
-
 /* Posts */
 .post {
     margin-bottom: 3rem;
@@ -91,27 +195,6 @@ nav a:hover {
 .post p {
     color: #444;
     margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* Social Links */
-.social-links {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
-}
-
-.social-links a {
-    font-size: 0.9rem;
-    color: #666;
 }
 
 /* Responsive design */

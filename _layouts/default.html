@@ -8,22 +8,21 @@
     {% seo %}
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="{{ '/' | relative_url }}" style="border-bottom: none;">{{ site.title }}</a></h1>
-            <nav>
+    <div class="site-wrapper">
+        <header class="site-header">
+            <h1 class="site-title">{{ site.title }}</h1>
+            <nav class="site-nav">
                 <a href="{{ '/' | relative_url }}">Blog</a>
                 <a href="{{ '/about' | relative_url }}">About</a>
                 <a href="{{ '/projects' | relative_url }}">Projects</a>
                 <a href="{{ '/contact' | relative_url }}">Contact</a>
             </nav>
+            <hr>
         </header>
-
-        <main>
+        <main class="site-main">
             {{ content }}
         </main>
-
-        <footer>
+        <footer class="site-footer">
             <div class="social-links">
                 <a href="https://github.com/jsrathi17">GitHub</a>
                 <a href="https://twitter.com/jsrathi17">Twitter</a>
