@@ -2,18 +2,16 @@
 layout: default
 title: Home
 ---
-<section class="posts">
-    <h2>Latest Posts</h2>
-    <div class="post-list">
-        {% for post in site.posts %}
-        <article class="post">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        </article>
-        {% endfor %}
-    </div>
-</section>
+<div class="about-profile">
+  <div>
+    <p>I'm Jayshree Rathi, a cloud and devops engineer currently focusing on deploying ML systems in the cloud in production.</p>
+    <p>I enjoy learning about fun technical challenges and collaborating with great teams. Reach out if you want to find a way to work together!</p>
+    <p>Previously, I worked on cloud infrastructure and automation. My interests include AI, automation, and scalable systems.</p>
+    <p>I'm active on <a href="https://github.com/jsrathi17">GitHub</a> and <a href="https://www.linkedin.com/in/jsrathi17/">LinkedIn</a>.</p>
+  </div>
+  <!-- Optional: Add your profile image here -->
+  <!-- <img src="/assets/profile.jpg" alt="Jayshree Rathi" /> -->
+</div>
 
 <div class="container">
     <header>
