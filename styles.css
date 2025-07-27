@@ -1,3 +1,16 @@
+/* Profile flex alignment for image and text */
+.profile-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 /* Header flex alignment for single line */
 .site-header-flex {
   display: flex;
