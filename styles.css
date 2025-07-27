@@ -9,13 +9,16 @@ body {
 
 .container {
     display: flex;
-    max-width: 1100px;
+    max-width: 900px; /* Adjusted max-width */
     margin: 0 auto;
     gap: 40px;
+    padding: 0 20px; /* Added padding */
 }
 
 .sidebar {
-    flex: 0 0 250px; /* Do not grow, do not shrink, base width 250px */
+    flex: 0 0 250px; /* Fixed sidebar width */
+    padding-right: 20px; /* Added padding to the right of the sidebar */
+    border-right: 1px solid #eee; /* Added a subtle border */
 }
 
 .about-profile h2 {
@@ -41,64 +44,10 @@ body {
 }
 
 .main-content-wrapper {
-    flex: 1; /* Grow to fill available space */
-    min-width: 0; /* Prevents overflow issues with flex items */
+    flex: 1; /* Main content takes up remaining space */
+    min-width: 0; /* Prevents overflow */
 }
 
 .site-header {
     margin-bottom: 2rem;
-}
-
-.site-nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.site-nav a:hover {
-    color: #007bff;
-}
-
-.site-main h1, .site-main h2, .site-main h3 {
-    color: #222;
-}
-
-.post-list .post {
-    margin-bottom: 2em;
-}
-
-.post-list .post time {
-    color: #666;
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-.post-list .post h3 a {
-    text-decoration: none;
-    color: #333;
-}
-
-.post-list .post h3 a:hover {
-    color: #007bff;
-}
-
-.post-content {
-    margin-top: 2rem;
-}
-
-.site-footer {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* Responsive styles for smaller screens */
-@media (max-width: 800px) {
-    .container {
-        flex-direction: column;
-        padding: 15px;
-    }
 }
