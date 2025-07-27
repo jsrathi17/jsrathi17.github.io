@@ -8,38 +8,21 @@
     {% seo %}
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="about-profile">
-                <!-- Optional: Add your profile image here -->
-                <img src="/assets/profile.jpg" alt="Jayshree Rathi" class="profile-img" />
-                <h2>{{ site.title }}</h2>
-                <p>I am a Cloud Security and DevOps Engineer passionate about building secure, scalable infrastructure solutions. Currently, I work at Nordea as a Technology Graduate, where I’ve contributed to enterprise-scale automation using Ansible, delivered cloud-native solutions with a strong emphasis on security using AWS services like Terraform and CloudFormation, and led cross-functional initiatives as a certified SAFe Scrum Master. While AWS has been my primary focus, I’ve also applied my skills in GCP and Azure environments, especially in AI engineering projects using tools like Vertex AI and AgentSpace.</p>
-                <p>Previously, I was a Cyber Security Trainee at Nokia Bell Labs, where my Master’s thesis focused on mapping the public attack surface of mobile communication systems using Open Source Intelligence (OSINT) techniques. I also worked as a Backend Developer Intern at Ericsson, developing features for Ericsson Security Manager. My experience spans software development, cybersecurity, DevOps, and machine learning—giving me a broad perspective that I consider a strength. I enjoy thinking holistically about how technology, security, and scalability converge.</p>
-                <p>I hold a dual MSc. in Security and Cloud Computing through the Erasmus Mundus SECCLO program, awarded with a fully-funded scholarship. My studies at Aalto University and KTH Royal Institute of Technology laid a strong foundation in areas like cryptography, ethical hacking, and secure cloud systems. These academic foundations have been instrumental in shaping my practical work across diverse roles.</p>
-                <p>Looking forward, I aim to specialize in platform engineering with a security-first mindset. I’m particularly interested in how organizations can responsibly adopt emerging AI technologies while ensuring robust infrastructure, compliance, and security practices. I’m driven by a desire to bridge the gap between cutting-edge innovation and secure, sustainable implementation.</p>
-                <div class="social-links">
-                    <a href="https://github.com/your_github">GitHub</a>
-                    <a href="https://www.linkedin.com/in/your_linkedin">LinkedIn</a>
-                    <a href="https://twitter.com/your_twitter">Twitter</a>
-                </div>
-            </div>
-        </aside>
-        <div class="main-content-wrapper">
-            <header class="site-header">
-                <nav class="site-nav">
-                    <a href="{{ '/' | relative_url }}">Blog</a>
-                    <a href="{{ '/about' | relative_url }}">About</a>
-                    <a href="{{ '/projects' | relative_url }}">Projects</a>
-                </nav>
-            </header>
-            <main class="site-main">
-                {{ content }}
-            </main>
-            <footer class="site-footer">
-                <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
-            </footer>
-        </div>
+    <div class="site-wrapper">
+        <header class="site-header">
+            <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            <nav class="site-nav">
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/about' | relative_url }}">About</a>
+                <a href="{{ '/projects' | relative_url }}">Projects</a>
+            </nav>
+        </header>
+        <main class="site-main">
+            {{ content }}
+        </main>
+        <footer class="site-footer">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
