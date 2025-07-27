@@ -1,3 +1,70 @@
+/* Header flex alignment for single line */
+.site-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+.site-title {
+  margin: 0;
+  font-size: 2rem;
+}
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+  align-items: center;
+}
+.site-nav a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 500;
+}
+.site-nav a:hover {
+  text-decoration: underline;
+}
+/* Profile section styles moved from index.html */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 2rem;
+  float: left;
+}
+.profile-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.profile-nav {
+  font-size: 1.1rem;
+  margin-left: 1.5rem;
+}
+.profile-nav a {
+  margin-right: 1.2rem;
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 500;
+}
+.profile-nav a:hover {
+  text-decoration: underline;
+}
+.home-profile {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  overflow: hidden;
+}
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
@@ -18,23 +85,11 @@ body {
     text-decoration: none;
 }
 
-.home-profile {
-    text-align: left;
-}
 .site-header h1, .home-profile h2 {
     font-size: 1.5em;
     margin-top: 0;
 }
 
-.profile-img {
-    max-width: 100%;
-    border-radius: 50%;
-    margin-bottom: 1em;
-    max-width: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right:
-}
 
 .social-links a {
     display: block;
