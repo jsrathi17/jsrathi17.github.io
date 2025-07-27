@@ -7,21 +7,21 @@ body {
     padding: 20px;
 }
 
-.container {
-    display: flex;
-    max-width: 900px; /* Adjusted max-width */
+.site-wrapper {
+    max-width: 800px;
     margin: 0 auto;
-    gap: 40px;
-    padding: 0 20px; /* Added padding */
+    padding: 20px;
 }
 
-.sidebar {
-    flex: 0 0 250px; /* Fixed sidebar width */
-    padding-right: 20px; /* Added padding to the right of the sidebar */
-    border-right: 1px solid #eee; /* Added a subtle border */
+.site-header h1.site-title a {
+    color: #333;
+    text-decoration: none;
 }
 
-.about-profile h2 {
+.home-profile {
+    text-align: left;
+}
+.site-header h1, .home-profile h2 {
     font-size: 1.5em;
     margin-top: 0;
 }
@@ -30,6 +30,10 @@ body {
     max-width: 100%;
     border-radius: 50%;
     margin-bottom: 1em;
+    max-width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right:
 }
 
 .social-links a {
