@@ -1,108 +1,4 @@
-/* Float profile image and wrap text */
-.profile-img-float {
-  width: 240px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 50%;
-  float: left;
-  margin-right: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.main-heading {
-  font-size: 2.7rem;
-  margin-top: 0.2rem;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
-}
-.profile-text {
-  overflow: hidden;
-  max-width: 900px;
-}
-/* Profile flex alignment for image and text */
-.profile-flex {
-  display: flex;
-  align-items: flex-start;
-  gap: 2.5rem;
-}
-.profile-img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-/* Header flex alignment for single line */
-/* Flex container for header to align title and nav */
-.site-header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* This pushes the title and nav to opposite ends */
-}
-/* Site Title Styles */
-.site-title {
-  font-family: "Georgia", "Times New Roman", serif; /* Serif font for the title */
-  font-size: 2.5rem; /* Increased font size */
-  margin: 0;
-  font-weight: 400;
-}
-/* Navigation Styles */
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.8rem; /* Adjusted gap between nav items */
-  font-size: 1rem;
-}
-.site-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-.site-nav a:hover {
-  text-decoration: underline;
-  color: #007acc;
-}
-/* Profile section styles moved from index.html */
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.profile-img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 2rem;
-  float: left;
-}
-.profile-title {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-.profile-nav {
-  font-size: 1.1rem;
-  margin-left: 1.5rem;
-}
-.profile-nav a {
-  margin-right: 1.2rem;
-  text-decoration: none;
-  color: #007acc;
-  font-weight: 500;
-}
-.profile-nav a:hover {
-  text-decoration: underline;
-}
-.home-profile {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  overflow: hidden;
-}
+/* General Body Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
@@ -112,77 +8,91 @@ body {
     padding: 20px;
 }
 
-/* Updated wrapper style */
+/* Site Wrapper */
 .site-wrapper {
-    max-width: 1100px; /* Increased max-width for better spacing */
+    max-width: 900px; /* Adjusted for optimal reading width */
     margin: 0 auto;
     padding: 20px;
 }
 
-.site-header h1.site-title a {
+/* Header Styles */
+.site-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0; /* Added line below the header */
+}
+
+.site-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.site-title a {
     color: #333;
     text-decoration: none;
 }
 
-.site-header h1, .home-profile h2 {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-
-.social-links a {
-    display: block;
-    margin-bottom: 0.5em;
-    text-decoration: none;
-    color: #007bff;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-.main-content-wrapper {
-    flex: 1; /* Main content takes up remaining space */
-    min-width: 0; /* Prevents overflow */
-}
-
-.site-header {
-    margin-bottom: 2rem;
+/* Navigation Styles */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 1rem;
 }
 
 .site-nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 .site-nav a:hover {
-    color: #007bff;
+  text-decoration: underline;
+  color: #007acc;
 }
 
-.post-list .post {
-    margin-bottom: 2em;
+/* Home Page Profile Styles */
+.home-profile {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  overflow: hidden; /* This is crucial for containing the floated element */
 }
 
-.post-list .post time {
-    color: #666;
-    display: block;
-    margin-bottom: 0.5em;
+/* New style for the right-floated image */
+.profile-img-right {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: right; /* Float the image to the right */
+  margin-left: 2.5rem; /* Add space to the left of the image */
+  margin-bottom: 1.5rem;
 }
 
-.post-list .post h3 a {
-    text-decoration: none;
-    color: #333;
-}
-
-.post-list .post h3 a:hover {
-    color: #007bff;
+.profile-text p {
+  margin-top: 0;
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 800px) {
-    .container {
+    .site-header-flex {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    /* Stack image on top of text on small screens */
+    .profile-img-right {
+      float: none;
+      display: block;
+      margin: 0 auto 2rem; /* Center the image with bottom margin */
     }
 }
